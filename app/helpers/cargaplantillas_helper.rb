@@ -1,0 +1,2 @@
+module CargaplantillasHelper
+end

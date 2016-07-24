@@ -1,0 +1,24 @@
+<%= simple_form_for @cargaplantilla, html:{ multipart: true} do |f| %>
+  <%= f.error_notification %>
+
+	<div class="form-inputs">
+		<%= f.input :titulo %>
+	</div>
+
+	<div class="file-field input-field">
+		<div class="btn blue darken-3">
+			<span>Pantilla</span>
+			<input name="cargaplantilla[file]" id="cargaplantilla_file" type="file">
+		</div>
+			<div class="file-path-wrapper">
+			<input class="file-path validate" type="text">
+		</div>
+	</div>
+	<br>
+	<div class="form-actions">
+	<%= button_tag(type: 'submit', class:'col m8 offset-m2 btn white-text red darken-1 waves-effect waves-light') do %>
+         Salvar <i class="material-icons right">save</i>
+     <% end %>
+	</div>
+  
+<% end %>

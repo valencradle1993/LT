@@ -1,0 +1,20 @@
+{
+  "name": "laureate",
+  "authors": [
+    "valentin <valen.cradle@gmail.com>"
+  ],
+  "description": "none",
+  "main": "none",
+  "keywords": [
+    "rails",
+    "ruby"
+  ],
+  "license": "MIT",
+  "homepage": "none",
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "Materialize": "materialize#^0.97.6",
+    "html2canvas": "^0.4.1",
+    "pdfmake": "^0.1.20"
+  }
+}

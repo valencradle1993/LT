@@ -1,0 +1,46 @@
+
+<section class="container">
+  <section class="row">
+      
+      <div class="col m9">
+        <h1>Plantilla Código: <%= @cargaplantilla.id %></h1>
+      </div>
+
+	   <p id="notice"><%= notice %></p>
+  </section>
+</section>
+
+<p id="notice"><%= notice %></p>
+
+<section class="container">
+  <section class="row">
+
+      <div class="col m12">
+			<table class="striped">
+										
+				<tr> 
+					<th>Código</th>
+					<td><%= @cargaplantilla.id %></td>
+				</tr>
+				<tr>
+					<th>Titulo</th>
+					<td><%= @cargaplantilla.titulo %></td>
+				</tr>
+				<tr>
+					<th>Tiempo de creacion</th>
+					<td> Hace <%= time_ago_in_words(@cargaplantilla.created_at) %><td>
+				</tr>
+				<tr> 
+					<th>ruta del archivo</th>
+					<td><%= @cargaplantilla.file %></td>
+				</tr>
+				
+			</table>
+      </div>
+
+
+<%= link_to 'Editar', edit_cargaplantilla_path(@cargaplantilla), class:'btn red white-text' %> |
+<%= link_to 'ir atrás', cargaplantillas_path, class:'btn red white-text' %>
+
+  </section>
+</section>

@@ -1,0 +1,49 @@
+<section class="container">
+  <section class="row">
+      
+      <div class="col m9">
+        <h1>Lista de Plantillas</h1>
+      </div>
+
+      <div class="col m3">
+        <br>
+        <br>
+        <%= link_to new_cargaplantilla_path, class: 'btn-floating btn-large waves-effect waves-light red' do %> 
+            <i class="material-icons">add</i>
+        <% end %>
+        <%= link_to editor_root_path, class: 'btn-floating btn-large waves-effect waves-light red' do %> 
+            <i class="material-icons">edit</i>
+        <% end %>
+      </div>
+
+  </section>
+</section>
+
+<p id="notice"><%= notice %></p>
+
+<section class="container">
+  <section class="row">
+      <div class="col m12">
+        <table class="bordered striped centered">
+          <thead>
+            <tr>
+              <th>Titulo</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @cargaplantillas.each do |cargaplantilla| %>
+              <tr>
+                <td><%= cargaplantilla.titulo %></td>
+                <td><%= link_to 'Mostrar', cargaplantilla %></td>
+                <td><%= link_to 'Editar', edit_cargaplantilla_path(cargaplantilla) %></td>
+                <td><%= link_to 'Eliminar', cargaplantilla, method: :delete, data: { confirm: 'Estas seguro de eliminar' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      
+  </section>
+</section>
