@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160724014458) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "cargaplantillas", force: :cascade do |t|
     t.string   "titulo"
     t.datetime "created_at",        null: false
